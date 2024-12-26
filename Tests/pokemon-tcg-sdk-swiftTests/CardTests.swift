@@ -25,17 +25,17 @@ struct CardServiceTests {
 
         // Créer une instance de MockNetworkManager
         let mockManager = MockNetworkManager(response: mockData, error: nil)
-//
-//        // Injecter le mock dans CardService
-//        let service = CardService(networkManager: mockManager)
-//
-//
-//        let card = try await service.findCard(by: "xy1-1")
-//
-//        print(card.id)
-//        #expect(card.id == "xy1-1")
-//        #expect(card.name == "Venusaur")
-//        #expect(card.supertype == "Pokémon")
-//        #expect(card.hp == "160")
+
+        // Injecter le mock dans CardService
+        let service = CardService(networkManager: mockManager)
+
+
+        let card = try await service.findCard(by: "xy1-1")
+
+        print(card.id)
+        #expect(card.id == "xy1-1")
+        #expect(card.name == "Venusaur")
+        #expect(card.supertype == "Pokémon")
+        #expect(card.hp == "160")
     }
 }

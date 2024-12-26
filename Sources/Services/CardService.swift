@@ -14,12 +14,12 @@ public class CardService {
         self.networkManager = networkManager
     }
 
-    public func findCard(by id: String) async throws -> Card  {
+    public func findCard(by id: String) async throws -> PokemonCard {
         let endpoint = Endpoint(path: "cards/\(id)")
         return try await networkManager.request(endpoint: endpoint)
     }
 
-    public func searchCard(query: String) async throws -> [Card] {
+    public func searchCard(query: String) async throws -> PokemonCardResponse {
         let endpoint = Endpoint(path: "cards", parameters: ["q":query])
         return try await networkManager.request(endpoint: endpoint)
     }

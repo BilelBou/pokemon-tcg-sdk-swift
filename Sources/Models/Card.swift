@@ -7,6 +7,19 @@
 
 import Foundation
 
+
+public struct PokemonCardResponse: Codable {
+    let data: [Card]
+    let page: Int
+    let pageSize: Int
+    let count: Int
+    let totalCount: Int
+}
+
+public struct PokemonCard: Codable {
+    let data: [Card]
+}
+
 public struct Card: Codable {
     public let id: String
     public let name: String
