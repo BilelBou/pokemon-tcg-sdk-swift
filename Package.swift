@@ -8,14 +8,14 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "pokemon-tcg-sdk-swift",
+            name: "PokemonTCG",
             targets: ["pokemon-tcg-sdk-swift"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "pokemon-tcg-sdk-swift"),
+            name: "PokemonTCG"),
         .testTarget(
             name: "pokemon-tcg-sdk-swiftTests",
             dependencies: ["pokemon-tcg-sdk-swift"]
