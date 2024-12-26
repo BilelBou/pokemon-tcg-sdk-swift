@@ -6,7 +6,7 @@
 //
 
 import Testing
-@testable import pokemon_tcg_sdk_swift
+@testable import PokemonTCGSDKSwift
 
 struct CardServiceTests {
 

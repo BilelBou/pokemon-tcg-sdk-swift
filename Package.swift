@@ -4,21 +4,24 @@
 import PackageDescription
 
 let package = Package(
-    name: "PokemonTCG",
+    name: "PokemonTCGSDKSwift",
+    platforms: [
+      .iOS(.v17)
+    ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "pokemon-tcg-sdk-swift",
-            targets: ["pokemon-tcg-sdk-swift"]),
+            name: "PokemonTCGSDKSwift",
+            targets: ["PokemonTCGSDKSwift"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "pokemon-tcg-sdk-swift"),
+            name: "PokemonTCGSDKSwift"),
         .testTarget(
-            name: "pokemon-tcg-sdk-swiftTests",
-            dependencies: ["pokemon-tcg-sdk-swift"]
+            name: "PokemonTCGSzDKSwift",
+            dependencies: ["PokemonTCGSDKSwift"]
         ),
     ]
 )

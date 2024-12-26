@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import pokecom_tcg_sdk_swift
 
 class MockNetworkManager: NetworkManager {
     private let response: Data?
