@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AncientTrait: Codable {
+public struct AncientTrait: Codable, Sendable {
     public let name: String
     public let text: String
 }

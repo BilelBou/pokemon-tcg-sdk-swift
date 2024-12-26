@@ -16,11 +16,11 @@ public struct PokemonCardResponse: Codable {
     public let totalCount: Int
 }
 
-public struct PokemonCard: Codable {
+public struct PokemonCard: Codable, Sendable {
     public let data: Card
 }
 
-public struct Card: Codable {
+public struct Card: Codable, Sendable {
     public let id: String
     public let name: String
     public let supertype: String

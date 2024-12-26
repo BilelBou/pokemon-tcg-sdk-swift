@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Weakness: Codable {
+public struct Weakness: Codable, Sendable {
     public let type: String
     public let value: String
 }

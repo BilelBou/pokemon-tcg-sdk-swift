@@ -7,12 +7,12 @@
 
 import Foundation
 
-public struct CardMarket: Codable {
+public struct CardMarket: Codable, Sendable {
     public let url: String
     public let updatedAt: String
     public let prices: CardMarketPrices?
 
-    public struct CardMarketPrices: Codable {
+    public struct CardMarketPrices: Codable, Sendable {
         public let averageSellPrice: Double?
         public let lowPrice: Double?
         public let trendPrice: Double?

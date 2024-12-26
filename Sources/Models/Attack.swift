@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Attack: Codable {
+public struct Attack: Codable, Sendable {
     public let name: String
     public let cost: [String]?
     public let text: String?

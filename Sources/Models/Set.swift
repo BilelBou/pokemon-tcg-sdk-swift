@@ -9,13 +9,13 @@ import Foundation
 
 import Foundation
 
-public struct Set: Codable {
+public struct Set: Codable, Sendable {
     public let id: String
     public let name: String
     public let series: String
     public let printedTotal: Int
     public let total: Int
-    public let legalities: Legalities?
+    public let legalities: Legality?
     public let ptcgoCode: String?
     public let releaseDate: String
     public let updatedAt: String
@@ -23,13 +23,7 @@ public struct Set: Codable {
 
     // MARK: - Nested Types
 
-    public struct Legalities: Codable {
-        public let standard: String?
-        public let expanded: String?
-        public let unlimited: String?
-    }
-
-    public struct SetImages: Codable {
+    public struct SetImages: Codable, Sendable {
         public let symbol: String
         public let logo: String
     }

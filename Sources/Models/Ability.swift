@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Ability: Codable {
+public struct Ability: Codable, Sendable {
     public let name: String
     public let text: String
     public let type: String

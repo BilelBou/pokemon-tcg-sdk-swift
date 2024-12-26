@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Resistance: Codable {
+public struct Resistance: Codable, Sendable {
     public let type: String
     public let value: String
 }

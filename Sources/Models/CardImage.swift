@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct CardImages: Codable {
+public struct CardImages: Codable, Sendable {
     public let small: String
     public let large: String
 }

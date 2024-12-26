@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Legality: Codable {
+public struct Legality: Codable, Sendable {
     public let standard: String?
     public let expanded: String?
     public let unlimited: String?
