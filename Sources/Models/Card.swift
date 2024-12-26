@@ -9,15 +9,15 @@ import Foundation
 
 
 public struct PokemonCardResponse: Codable {
-    let data: [Card]
-    let page: Int
-    let pageSize: Int
-    let count: Int
-    let totalCount: Int
+    public let data: [Card]
+    public let page: Int
+    public let pageSize: Int
+    public let count: Int
+    public let totalCount: Int
 }
 
 public struct PokemonCard: Codable {
-    let data: Card
+    public let data: Card
 }
 
 public struct Card: Codable {
