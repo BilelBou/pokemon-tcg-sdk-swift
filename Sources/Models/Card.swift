@@ -17,7 +17,7 @@ public struct PokemonCardResponse: Codable {
 }
 
 public struct PokemonCard: Codable {
-    let data: [Card]
+    let data: Card
 }
 
 public struct Card: Codable {
