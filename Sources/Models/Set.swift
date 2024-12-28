@@ -9,6 +9,18 @@ import Foundation
 
 import Foundation
 
+public struct SetResponse: Codable, Sendable {
+    public let data: [Set]
+    public let page: Int
+    public let pageSize: Int
+    public let count: Int
+    public let totalCount: Int
+}
+
+public struct PokemonSet: Codable, Sendable {
+    public let date: Set
+}
+
 public struct Set: Codable, Sendable {
     public let id: String
     public let name: String

@@ -14,17 +14,17 @@ public class SetServices {
         self.networkManager = networkManager
     }
 
-    public func findSet(by id: String) async throws -> Set {
+    public func findSet(by id: String) async throws -> PokemonSet {
         let endpoint = Endpoint(path: "sets/\(id)")
         return try await networkManager.request(endpoint: endpoint)
     }
 
-    public func searchSet(query: String) async throws -> [Set] {
+    public func searchSet(query: String) async throws -> SetResponse {
         let endpoint = Endpoint(path: "sets", parameters: ["q":query])
         return try await networkManager.request(endpoint: endpoint)
     }
 
-    public func allSets() async throws -> [Set] {
+    public func allSets() async throws -> SetResponse {
         let endpoint = Endpoint(path: "sets")
         return try await networkManager.request(endpoint: endpoint)
     }
