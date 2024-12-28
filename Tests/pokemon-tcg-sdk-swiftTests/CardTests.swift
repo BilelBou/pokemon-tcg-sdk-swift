@@ -27,7 +27,7 @@ struct CardServiceTests {
         let mockManager = MockNetworkManager(response: mockData, error: nil)
 
         // Injecter le mock dans CardService
-        let service = CardService(networkManager: mockManager)
+        let service = CardServices(networkManager: mockManager)
 
 
         let card = try await service.findCard(by: "xy1-1")

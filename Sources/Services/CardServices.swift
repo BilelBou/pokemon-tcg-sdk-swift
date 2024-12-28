@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class CardService {
+public class CardServices {
     private let networkManager: NetworkManager
 
     public init(networkManager: NetworkManager) {

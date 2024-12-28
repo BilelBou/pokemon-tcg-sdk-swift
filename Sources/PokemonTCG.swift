@@ -8,10 +8,12 @@
 import Foundation
 
 public class PokemonTCG {
-    public let cardService: CardService
+    public let cardService: CardServices
+    public let setService: SetServices
 
     public init(apiKey: String) {
         let networkManager = NetworkManager(apiKey: apiKey)
-        self.cardService = CardService(networkManager: networkManager)
+        self.cardService = CardServices(networkManager: networkManager)
+        self.setService = SetServices(networkManager: networkManager)
     }
 }
