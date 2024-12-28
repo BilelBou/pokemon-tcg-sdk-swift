@@ -19,8 +19,15 @@ public class CardServices {
         return try await networkManager.request(endpoint: endpoint)
     }
 
-    public func searchCard(query: String) async throws -> PokemonCardResponse {
-        let endpoint = Endpoint(path: "cards", parameters: ["q":query])
+    public func searchCard(query: String, currentPage: Int?, pageSize: Int?) async throws -> PokemonCardResponse {
+        var parameters = ["q":query]
+
+        if let currentPage, let pageSize {
+            parameters["page"] = "\(currentPage)"
+            parameters["pageSize"] = "\(pageSize)"
+        }
+
+        let endpoint = Endpoint(path: "cards", parameters: parameters)
         return try await networkManager.request(endpoint: endpoint)
     }
 }
